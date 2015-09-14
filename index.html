@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Cat Clicker Premium</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="cats">
+    <div id="cat_menu" data-bind="foreach: catList">
+        <p class="cat_menu_item" data-bind="attr: {id: 'cat' + $index()}">
+            <span class="name" data-bind="text: catName"></span>
+            <img src="" class="cat_menu_img" data-bind="attr: {src: imgPath},click: $parent.showCat($index())" />
+        </p>
+    </div>
+    <div id="cat_main">
+        <div class="user_area" data-bind="with: currentCat">
+            <div><span id="cat_name1" data-bind="text: catName"></span> is <span id="cat_title"
+                                                                                 data-bind="text: catTitle"></span>
+            </div>
+            <div>You've clicked <span id="cat_name" data-bind="text: catName"></span> the cat <span id="no_of_clicks"
+                                                                                                    data-bind="text: clickCount">0</span>
+                times
+            </div>
+            <img src="" id="cat_img" data-bind="click: $parent.incClickCount,attr: {src: imgPath}"/>
+            <ul data-bind="foreach: nickNames">
+                <li>
+                    Nick Name <em data-bind="text: $index"></em> is: <b data-bind="text: $data"></b>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

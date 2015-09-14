@@ -1,0 +1,51 @@
+#cat_menu {
+    float: left;
+    width: 30%;
+    display: block;
+    position: relative;
+    padding-right: 10px;
+    border-right: 4px solid black;
+}
+
+#cat_menu > p {
+    border-bottom: 2px solid black;
+}
+
+#cat_menu > p > span {
+    display: block;
+}
+
+#cat_menu > p > img {
+    width: 99%;
+    height: auto;
+}
+
+#cat_main {
+    right: 10px;
+    width: 60%;
+    display: block;
+    position: fixed;
+    margin-top: 10px;
+}
+
+#cat_main img#cat_img {
+    width: 640px;
+    height: auto;
+}
+button {
+    padding: 10px 20px;
+    margin: 10px 20px 10px 0px;
+}
+
+#admin_panel {
+    width: 300px;
+    display: none;
+}
+#admin_panel p {
+    width: 100%;
+}
+
+#admin_panel input
+{
+    float: right;
+}
